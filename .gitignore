@@ -20,6 +20,7 @@
 
 # RStudio files
 .Rproj.user/
+.Rproj
 
 # produced vignettes
 vignettes/*.html
@@ -47,3 +48,22 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Data files (sensitive or large)
+data/
+*.csv
+*.xlsx
+*.sav
+*.rds
+*.rdata
+
+# Output
+output/
+figures/
+*.html
+*.pdf
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
