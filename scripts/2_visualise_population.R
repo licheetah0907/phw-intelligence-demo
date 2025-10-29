@@ -13,7 +13,7 @@ population <- population %>%
 
 # plotting population data
 p1 <- ggplot(data = population, aes(x = Date, y = Value, linetype = Measure)) + 
-  geom_line(colour = "blue") +
+  geom_line(colour = "navy") +
   scale_linetype_manual(values = c("Historical" = 1, "Projected" = 2)) +
       labs(title = "Wales Population Trend and Projection 2002-2035",
        x = 'Year',
