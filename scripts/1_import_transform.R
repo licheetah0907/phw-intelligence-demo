@@ -19,9 +19,12 @@ cancer_women <- subset(raw, Characteristic == 'Women',
 cancer_men <- subset(raw, Characteristic == 'Men',
                      select = c(Date, Indicator, Measure, Value))
 
-# transforming dataset
+# transforming cancer data frames
 cancer_women <- cancer_women %>% 
-  pivot_wider(names_from = 'Indicator', values_from = 'Value')
+  pivot_wider(names_from = 'Indicator', values_from = 'Value') %>% 
+  colnames(cancer_women) <- c('Year', 'Measure', 'Breast',
+                                    'Colorectal', 'Lung', 'All_Non-NMSC')
 
 cancer_men <- cancer_men %>% 
-  pivot_wider(names_from = 'Indicator', values_from = 'Value')
+  pivot_wider(names_from = 'Indicator', values_from = 'Value') %>% 
+  colnames(cancer_men) <- c('Year', 'Measure','Colorectal', 'Lung', 'All_Non-NMSC', 'Prostate')
