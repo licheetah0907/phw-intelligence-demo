@@ -33,4 +33,4 @@ p2 <- p2 + theme(axis.line = element_line(colour = 'grey'),
            panel.background = element_blank())
 
 # saving the plot
-ggsave(filename = "outputs/Wales Age-Specific Cancer Rate 2019.png", plot = p2)
+ggsave(filename = "outputs/Rate Plot 1.png", plot = p2)

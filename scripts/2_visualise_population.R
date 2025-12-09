@@ -16,7 +16,7 @@ p1 <- ggplot(data = population, aes(x = Date, y = Value, linetype = Measure)) +
   geom_line(colour = "navy") +
   scale_linetype_manual(values = c("Historical" = 1, "Projected" = 2)) +
       labs(title = "Wales Population Trend and Projection 2002-2035",
-       x = 'Year',
+       x = 'Year', 
        y = 'Population aged 65+',
        linetype = NULL)
   
@@ -33,4 +33,4 @@ p1 <- p1 + theme(axis.line = element_line(colour = "grey"),
            legend.position = "top")
 
 # saving the plot
-ggsave(filename = "outputs/Wales Population Growth Projection.png", plot = p1)
+ggsave(filename = "outputs/Population Plot 1.png", plot = p1)

@@ -3,20 +3,20 @@ install.packages('tidyverse')
 library(tidyverse)
 
 # importing dataset
-raw <- read.csv('wales_cancer.csv')
-View(raw)
+data <- read.csv('wales_cancer.csv')
+View(data)
 
 # separating data to different objects (for easier analysis and visualisation)
-population <- subset(raw, Indicator == 'Population resident in Wales', 
+population <- subset(data, Indicator == 'Population resident in Wales', 
                      select = c(Date, Measure, Value))
 
-rate_2019 <- subset(raw, Measure == 'Age specific rate per 100,000',
+rate_2019 <- subset(data, Measure == 'Age specific rate per 100,000',
                     select = c(Date, Characteristic, Value))
 
-cancer_women <- subset(raw, Characteristic == 'Women',
+cancer_women <- subset(data, Characteristic == 'Women',
                        select = c(Date, Indicator, Measure, Value))
 
-cancer_men <- subset(raw, Characteristic == 'Men',
+cancer_men <- subset(data, Characteristic == 'Men',
                      select = c(Date, Indicator, Measure, Value))
 
 # transforming cancer data frames
